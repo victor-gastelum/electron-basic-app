@@ -1,0 +1,23 @@
+{
+  "name": "electron-basic-app",
+  "version": "1.0.0",
+  "description": "Basic app with the object learn electron",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/victor-gastelum/electron-basic-app.git"
+  },
+  "author": "Victor Manuel Gastelum Coronado",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/victor-gastelum/electron-basic-app/issues"
+  },
+  "homepage": "https://github.com/victor-gastelum/electron-basic-app#readme",
+  "devDependencies": {
+    "electron": "^39.0.0"
+  }
+}
