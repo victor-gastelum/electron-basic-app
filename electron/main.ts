@@ -1,13 +1,10 @@
 import { app, BrowserWindow } from "electron";
 import path from "path";
 
-// Importa IPC handlers
-import "./ipc/auth.ipc";
-import "./ipc/clients.ipc";
-import "./ipc/invoices.ipc";
+let win: BrowserWindow | null = null;
 
 async function createWindow() {
-  const win = new BrowserWindow({
+  win = new BrowserWindow({
     width: 1200,
     height: 800,
     webPreferences: {
@@ -15,9 +12,12 @@ async function createWindow() {
     },
   });
 
-  if (process.env.NODE_ENV === "development") {
+  if (!app.isPackaged) {
+    // 👇 Modo desarrollo (React con Vite)
     await win.loadURL("http://localhost:5173");
+    win.webContents.openDevTools(); // opcional, muestra consola
   } else {
+    // 👇 Modo producción (build estático)
     await win.loadFile(path.join(__dirname, "../dist/index.html"));
   }
 }
