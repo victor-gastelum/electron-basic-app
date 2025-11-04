@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "build:main": "tsc -p electron/tsconfig.json --outDir dist-electron",
+    "build:main": "tsc -p tsconfig.json --outDir dist-electron",
     "start": "npm run build:main && electron ."
   },
   "repository": {
@@ -33,11 +33,18 @@
     "vite": "^7.1.12"
   },
   "dependencies": {
+    "@radix-ui/react-label": "^2.1.7",
+    "@radix-ui/react-slot": "^1.2.3",
     "@tailwindcss/vite": "^4.1.16",
     "@vscode/sqlite3": "^5.1.8-vscode",
     "bcryptjs": "^3.0.2",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
     "drizzle-orm": "^0.44.7",
+    "lucide-react": "^0.552.0",
     "react-router-dom": "^7.9.5",
-    "sqlite3": "^5.1.7"
+    "sqlite3": "^5.1.7",
+    "tailwind-merge": "^3.3.1",
+    "tailwindcss-animate": "^1.0.7"
   }
 }
