@@ -2,11 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* (opcional) puedes añadir estilos globales */
-body {
-  @apply bg-gray-50 text-gray-900;
-}
-
 @layer base {
   :root {
     --background: 0 0% 100%;
